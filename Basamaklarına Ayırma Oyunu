@@ -1,0 +1,68 @@
+//AlperrTG
+
+
+
+int x;
+int  binler , yuzler , onlar , birler;
+
+void setup() {
+
+  Serial.begin(9600);
+
+  Serial.println("Sayilari Rakamlarina Ayirma Programina Hos Geldiniz");
+  delay(500);
+  Serial.println("----------------------------------------------------------");
+  delay(2000);
+  Serial.println("Lutfen Sayiyi Giriniz");
+  delay(500);
+  while (1) {
+    if (Serial.available() > 0) {
+      Serial.print("Girilen Sayi = ");
+      x =  Serial.parseInt();
+      Serial.println(x);
+      delay(500);
+      Serial.println("Sayi Girildi");
+      break;
+    }
+  }
+}
+
+void loop() {
+
+  Serial.println("Rakamlarina ayriliyor");
+  Serial.println("%25");
+  delay(1000);
+  Serial.println("%50");
+  delay(1000);
+  Serial.println("%75");
+  delay(1000);
+  Serial.println("%100");
+  delay(500);
+  Serial.println("Rakamlarina Ayrildi");
+  binler = x / 1000;
+  yuzler = (x - binler * 1000) / 100;
+  onlar = (x - ((binler * 1000) + (yuzler * 100))) / 10;
+  birler = (x - ((binler * 1000) + (yuzler * 100) + (onlar * 10))) / 1;
+
+  delay(500);
+
+  Serial.print("binler basamagi =");
+  Serial.println(binler);
+  delay(500);
+  Serial.print("yuzler basamagi =");
+  Serial.println(yuzler);
+  delay(500);
+  Serial.print("onlar basamagi =");
+  Serial.println(onlar);
+  delay(500);
+  Serial.print("birler basamagi =");
+  Serial.println(birler);
+  delay(500);
+  Serial.println("Islem Tamamlandi");
+  Serial.println("--------------------------------------------------------");
+
+  while (1);
+}
+
+
+
