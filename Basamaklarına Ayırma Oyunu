@@ -9,7 +9,7 @@ void setup() {
 
   Serial.begin(9600);
 
-  Serial.println("Sayilari Rakamlarina Ayirma Programina Hos Geldiniz");
+  Serial.println("Sayilari Basamaklarina Ayirma Programina Hos Geldiniz");
   delay(500);
   Serial.println("----------------------------------------------------------");
   delay(2000);
